@@ -1,0 +1,231 @@
+﻿
+@{
+    ViewData["Title"] = "GT_Web_App";
+}
+
+<div class="container-fluid mb-35">
+    <div class="row">
+        <div class="col-12 text-center mt-5">
+
+            <h1 class="display-3">Web App Login Prototype</h1>
+            <h4 class="text-muted">
+                User Experience Improvements: Application Login | Account Management | Course
+                Registration
+            </h4>
+            <svg class="mt-5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="350"
+                 height="350" viewBox="0 0 33 33" data-aos="fade-up">
+                <defs>
+                    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 600 600">
+                        <image width="600" height="600"
+                               xlink:href="data:image/png;base64,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" />
+                    </pattern>
+                </defs>
+                <rect id="tower" width="100%" height="100%" fill="url(#pattern)" />
+            </svg>
+            <p class="font-weight-lighter mb-0">
+                <small>
+                    This real-world solution has been reskinned to protect the clients
+                    privacy.
+                </small>
+            </p>
+            <p class="font-weight-lighter">
+                <small>
+                    Logo love: <a target="_blank"
+                                  href="https://github.com/realvjy/uilogos-XD">uilogos-XD</a>
+                </small>
+            </p>
+
+        </div>
+    </div>
+</div>
+@*Overview*@
+<div class="container-fluid bg-gradient py-4 py-lg-5 my-lg-5">
+    <div class="row pb-lg-5">
+        <div class="col-12 col-md-6 col-lg-2 offset-lg-1 align-self-end order-3 order-md-2 order-lg-0 font-weight-light text-light">
+            <div class="text-wrap">
+                <p>
+                    <small>
+                        This solution will cover:
+                    </small>
+                </p>
+                <ul>
+                    <li><small>Application Login.</small></li>
+                    <li><small>Password Management.</small></li>
+                    <li><small>Course Registration.</small></li>
+                </ul>
+                <p>
+                    <small>
+                        Visual design and branding
+                        will remain unchanged.
+                        <br />
+                        Changes to the current layout
+                        will be minimal, noticable only
+                        in form inputs and added buttons.
+                    </small>
+                </p>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-4 order-2 order-lg-0 ">
+            <div data-aos="fade-up">
+                <img class="img-fluid png-shadow" src="~/img/Create_Account_black-mockup.png"  />
+            </div>
+        </div>
+        <div class="col-12 col-lg-4 align-self-center order-1 order-lg-3  text-light">
+            <h3 class="mb-4">Overview</h3>
+            <p class="lh-2">
+                Online registration is currently handled through internal departments. Account Management is required to manually setup,
+                receive payment, and approve a registration. Once the account is created new users are often confused by the login process
+                and have difficulty understanding the access levels provided with their Green Tower login.
+            </p>
+            <p class="lh-2">
+                Additionally, a Green Tower account is required to register for training classes. The current manual process deters potential
+                independent clients from partnering with our programs. This solution will provide a better user experience for applications
+                logins, password management, and course registration.
+            </p>
+        </div>
+    </div>
+</div>
+@*Application Login*@
+<div class="container-fluid py-4 py-lg-5 my-lg-5">
+    <div class="row">
+
+        <div class="col-12 col-lg-4 offset-lg-1 align-self-center ">
+            <h3 class="mb-4"><small class="text-dark font-weight-light">Improvements:</small><br /> Application Login</h3>
+            <ol>
+                <li class="mb-4">Remove the current JavaScript dependent login button and replace with a navbar login link.</li>
+                <li class="mb-4">A <em>Forgot Password</em> link is a critical action and should display before a failed login attempt.</li>
+                <li class="mb-4">Add additional methods for new users and guests.</li>
+            </ol>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 offset-lg-1 mb-4">
+            <div data-aos="fade-up">
+                <img class="img-fluid png-shadow" src="~/img/Returning_Customer_black-mockup.png" />
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-2 align-self-end font-weight-light">
+            <div class="text-wrap">
+                <p>
+                    <small>
+                        Consider alternative login methods such as 2-factor authentication or social login. 2FA can be combined with
+                        password recovery for a more secure, simplified user process.
+                    </small>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+@*Password Management*@
+<div class="container-fluid bg-gradient py-4 py-lg-5">
+    <div class="row py-lg-5">
+        <div class="col-12 col-md-6 px-md-5 py-md-4 px-lg-3 py-lg-0 col-lg-3 offset-lg-1 mt-4 mt-md-0 order-md-1 order-lg-0">
+            <div data-aos="fade-up">
+                <img class="img-fluid png-shadow" src="~/img/Password_Reset_black-mockup.png" alt="Password Reset Screen" />
+            </div>
+        </div>
+        <div class="col-12 col-lg-4 text-light d-flex flex-column my-4 order-md-0 order-lg-1">
+            <h3 class="mb-4"><small class="text-light font-weight-light">Improvements:</small><br /> Password Management</h3>
+            <ol class="mb-auto">
+                <li class="mb-4">Add the option to show/hide password to eliminate the need for repeating fields.</li>
+                <li class="mb-4">Add a password strength meter and update in real time.</li>
+                <li class="mb-4">Define minimum security rules. Show password strength so users know the complexity of the entered password and can change the password accordingly.</li>
+            </ol>
+            <p class="font-weight-light">
+                <small>
+                    The e-mail reset link not only improves UX, but also provides a layer of security. Tell users
+                    immediately about changes to their information: e-mail addresses, passwords, etc. Likewise,
+                    provide a link in the e-mail that allows the user to undo.
+                </small>
+            </p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 mt-lg-2 order-md-2 order-lg-2">
+            <div data-aos="fade-up">
+                <img class="img-fluid png-shadow" src="~/img/Forgot_Password_Confirm_black-mockup.png" alt="Forgot Password Confirm Screen" />
+            </div>
+        </div>
+    </div>
+</div>
+@*Course Registration*@
+<div class="container-fluid py-4 py-lg-2 px-lg-4 my-lg-5">
+    <div class="row py-lg-5 mt-4">
+        <div class="col-12 col-md-4 col-lg-3 order-md-1 order-lg-0">
+            <h6 class="h2 mb-3"><span class="border rounded-circle py-2 px-3 py-md-0 px-md-1 py-lg-2 px-lg-3 shadow-sm">1</span> Login</h6>
+            <div data-aos="fade-up" data-aos-delay="50">
+                <img class="img-fluid png-shadow mb-5" src="~/img/Returning_Customer_blank_black-mockup.png" />
+            </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-3 order-md-2 order-lg-1">
+            <h6 class="h2 mb-3"><span class="border rounded-circle py-2 px-3 py-md-0 px-md-1 py-lg-2 px-lg-3 shadow-sm">2</span> Payment</h6>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <img class="img-fluid png-shadow mb-5" src="~/img/Returning_Customer-Payment_black-mockup.png" />
+            </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-3 order-md-3 order-lg-2">
+            <h6 class="h2 mb-3"><span class="border rounded-circle py-2 px-3 py-md-0 px-md-1 py-lg-2 px-lg-3 shadow-sm">3</span> Confirmation</h6>
+            <div data-aos="fade-up" data-aos-delay="150">
+                <img class="img-fluid png-shadow mb-4" src="~/img/Returning_Customer-Confirm_black-mockup.png" />
+            </div>
+        </div>
+        <div class="col-12 col-lg-3 d-flex flex-column my-4 mt-md-2 mb-md-1 order-md-0 order-lg-3">
+            <h3 class="mb-4"><small class="text-dark font-weight-light">Improvements:</small><br /> Course Registration</h3>
+            <p class="mb-auto">
+                For returning customers, the process for login, payment, and confirmation is now complete in three (3) short steps.
+            </p>
+            <p class="font-weight-light">
+                <small>
+                    Provide an option for users to keep themselves signed in for easier and faster logins on their personal devices.
+                    On Mobile devices auto focus first input fields for reduced clicks.
+                </small>
+            </p>
+        </div>
+    </div>
+</div>
+@*Account Registration*@
+<div class="container-fluid bg-gradient py-4 py-lg-5 my-lg-5">
+    <div class="row pb-lg-5">
+        <div class="col-12 col-md-6 col-lg-2 offset-lg-1 align-self-end order-3 order-lg-1 font-weight-light text-light">
+            <div class="text-wrap mb-md-5">
+                <p>
+                    <small>
+                        A free account will grant a user the lowest level of access into Green Tower Online.
+                    </small>
+                </p>
+                <p>
+                    <small>
+                        Permissions will be restricted to designated content until supplemental steps are verified by internal business processes.
+                    </small>
+                </p>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 order-2 mt-md-5">
+            <div data-aos="fade-up">
+                <img class="img-fluid png-shadow mb-5" src="~/img/New_Account_num_black-mockup.png" />
+            </div>
+        </div>
+        <div class="col-12 col-lg-4 offset-lg-1 align-self-center order-1 order-md-0 order-lg-3 text-light">
+            <h3 class="mb-4"><small class="text-light font-weight-light">Improvements:</small><br /> Account Registration</h3>
+            <ol>
+                <li class="mb-4">
+                    Add value by describing the benefits of account registration.
+                </li>
+                <li class="mb-4">Reduce the total ammount of required information for the initial registration process. Nine (9) total inputs with only four (4) required; down from nineteen (19) total. Additionally, collect account information in the same input series.</li>
+                <li class="mb-4">Validate without repeating fields.</li>
+                <li class="mb-4">Allow system functionalities without a registration confirmation.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+@*Download*@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <p class="lead"><small>Click below to download the Photoshop presentation.</small></p>
+            <button role="button" href="#" class="btn btn-warning text-light"
+                    data-aos="flip-down"
+                    data-aos-anchor-placement="bottom-bottom">
+                <i class="fas fa-file-download"></i> Download Project .PS file
+            </button>
+            <p><small>Bonus <em>Guest Registration</em> addendum included!</small></p>
+            
+        </div>
+    </div>
+</div>

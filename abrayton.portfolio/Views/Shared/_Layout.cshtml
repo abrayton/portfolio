@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewData["Title"] - abrayton Web Portfolio</title>
+
+    <link href="~/css/bootstrap.custom.min.css" rel="stylesheet" />
+    <link href="~/lib/aos/dist/aos.css" rel="stylesheet" />
+    <link href="~/css/site.min.css" rel="stylesheet" />
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="~/favicon.ico">
+    <link rel="apple-touch-icon" href="~/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/apple-touch-icon-114x114.png">
+
+    <script src="https://kit.fontawesome.com/853db1d86b.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+            <a class="navbar-brand" href="~/Home/Index">abrayton.com</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Resume">Resume</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" asp-area="" asp-controller="Projects" asp-action="GT_Web_App">Web App Login Example</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main id="@ViewData["Title"]" role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+    <div class="modal fade" id="psyop" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-slideout" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title align-right">37F Psychological Operations</h5>
+                </div>
+                <div class="modal-body">
+                    <p><small>"Psychological operations (United States)." Wikipedia, The Free Encyclopedia. Retrieved: @DateTime.Now.</small></p>
+                    <div id="psyopData"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="scout" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-slideout" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title align-right">19D Cavalry Scout</h5>
+                </div>
+                <div class="modal-body">
+                    <p><small>"Cavalry scout." Wikipedia, The Free Encyclopedia. Retrieved: @DateTime.Now.</small></p>
+                    <div id="scoutData"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#top" id="backToTop" class="btn btn-sm btn-outline-secondary" role="button">Back to top</a>
+    <footer class="border-top footer text-muted">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    &copy; 2019 - abrayton.com
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="~/lib/aos/dist/aos.js" asp-append-version="false"></script>
+    <script src="~/js/site.js" asp-append-version="false"></script>
+
+    @*@RenderSection("Scripts", required: true)*@
+</body>
+</html>

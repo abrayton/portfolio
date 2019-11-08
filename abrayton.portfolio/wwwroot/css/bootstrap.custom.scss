@@ -1,0 +1,146 @@
+﻿// Bootstrap Variable Overrides
+$blue: #0B3C49;
+$indigo: #6610f2;
+$orange: #EF8354;
+$yellow: #E1D89F;
+$gray-600: #BFC0C0;
+$warning: $orange;
+$info: $yellow;
+$body-color: #3B3D3C;
+$enable-responsive-font-sizes: true;
+// Required Bootstrap
+@import "../lib/bootstrap/scss/bootstrap";
+//SASS Variables
+$open-sans: 'Open Sans', sans-serif;
+$GT-color: #37A56E;
+
+html {
+    /* For a sticky footer.. */
+    position: relative;
+    min-height: 100%;
+}
+body {
+    font-family: $open-sans;
+    /* Margin bottom by footer height */
+    margin: 0 0 60px 0;
+    padding: 0;
+    width: 100%;
+}
+
+/*Scroll to top*/
+#backToTop {
+    display: inline-flex;
+    margin-bottom: 5px;
+
+    @include media-breakpoint-up(sm) {
+        position: fixed;
+        z-index: 100;
+        bottom: 6.75%;
+        left: 1%;
+    }
+}
+/*Resume*/
+.text-uppercase {
+    color: $primary;
+}
+.modal-dialog {
+    max-width: 30%;
+
+    @include media-breakpoint-down(sm) {
+        max-width: 100%;
+    }
+}
+
+.modal-dialog-slideout {
+    min-height: 100%;
+    margin: 0 0 0 auto;
+    background: #fff;
+}
+
+.modal.fade .modal-dialog.modal-dialog-slideout {
+    -webkit-transform: translate(100%, 0)scale(1);
+    transform: translate(100%, 0)scale(1);
+}
+
+.modal.fade.show .modal-dialog.modal-dialog-slideout {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    display: flex;
+    align-items: stretch;
+    -webkit-box-align: stretch;
+    height: 100%;
+}
+
+.modal.fade.show .modal-dialog.modal-dialog-slideout .modal-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.modal-dialog-slideout .modal-content {
+    border: 0;
+}
+
+.modal-dialog-slideout .modal-header,
+.modal-dialog-slideout .modal-footer {
+    height: 4rem;
+    display: block;
+}
+/*Projects*/
+.png-shadow {
+    filter: drop-shadow(2px 5px 4px rgba(0,0,0,0.65));
+}
+
+.bg-gradient {
+    background: rgb(55,165,110);
+    background: linear-gradient(180deg, rgba(55,165,110,1) 0%, rgba(16,54,35,1) 100%);
+}
+.vert-bg {
+    background: rgb(55,165,110);
+    background: linear-gradient(90deg, rgba(55,165,110,1) 0%, rgba(16,54,35,1) 100%);
+}
+ul.card-text {
+    padding-left: 20px;
+}
+p.lh-2 {
+    line-height: 2;
+}
+/*Project: GT_Web_App*/
+main#GT_Web_App {
+    .h2 {
+        color: $GT-color;
+
+        > span.border {
+            border-color: $GT-color !important;
+            border-width: 3px !important;
+        }
+    }
+
+    .text-wrap {
+        width: 100%;
+
+        @include media-breakpoint-up(md) {
+            max-width: 305px;
+        }
+    }
+
+    .btn-primary {
+        background: $GT-color;
+    }
+    /*Better OL>LI number styles*/
+    ol {
+        counter-reset: item;
+
+        li {
+            font-size: 1.2rem;
+            display: block;
+
+            &:before {
+                content: counter(item) ". ";
+                counter-increment: item;
+                color: $GT-color;
+                font-size: 1.25rem;
+                margin-left: -23px;
+            }
+        }
+    }
+}
