@@ -1,10 +1,14 @@
-﻿$(document).ready(function () {
+﻿$(window).on("backstretch.before", function (e, instance, index) {
+    instance.options.fade = 2000;
+    //https://www.jquery-backstretch.com/ 
+});
+$(document).ready(function () {
     AOS.init({
         duration: 600,
         mirror: true,
         easing: 'ease-in-out'
     });
-
+    
     //scroll to top
     $("#backToTop").hide(); // hide on page load
 

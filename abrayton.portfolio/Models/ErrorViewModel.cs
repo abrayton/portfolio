@@ -1,5 +1,3 @@
-using System;
-
 namespace abrayton.portfolio.Models
 {
     public class ErrorViewModel

@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Home_Page";
+    ViewData["Title"] = "Home";
 }
 
 <div class="container mt-2 mt-md-5" data-aos="fade-up">
@@ -18,14 +18,26 @@
                     <p class="card-text">
                         This portfolio was built with
                         <span class="initialism">ASP.NET</span>
-                        Core 
+                        Core
                         <abbr title="Mostly just 'VC' because... I'm front-end! :)" class="initialism">
-                        MVC
-                        </abbr> with a custom Bootstrap 4 framework. Want to see the code? Check out the project on
-                        <a class="text-light bg-dark" href="https://github.com/abrayton?tab=projects" target="_blank">Github.com</a>
+                            MVC
+                        </abbr> with a custom Bootstrap 4 framework. Want the code? Check out the project on
+                        <a class="text-light bg-dark" href="https://github.com/abrayton/portfolio" target="_blank">Github.com</a>
                     </p>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<a class="unsplash-badge" href="https://unsplash.com/@@varietou?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Background photo by Jules D. on Unsplash">
+    <span class="d-md-none text-light m-badge"><small>Background photo by Jules D. on Unsplash</small></span>
+    <span class="d-none d-md-inline-block py-1 px-1 text-light">
+        <svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg>
+    </span>
+    <span class="d-none d-md-inline-block py-1 px-1 text-light">Unsplash</span>
+</a>
+@section Scripts {
+    <script>
+        $.backstretch("/img/bg.jpg");
+    </script>
+}
