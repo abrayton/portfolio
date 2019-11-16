@@ -1,14 +1,19 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2.300-alpine3.9 as server
+# NuGet restore
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS build
+WORKDIR /src
+COPY *.sln .
+COPY abrayton.portfolio/*.csproj abrayton.portfolio/
+RUN dotnet restore
+COPY . .
 
-ENV ASPNETCORE_Environment=Production
-ENV ASPNETCORE_URLS http://+:5000
+# publish
+FROM build AS publish
+WORKDIR /src/abrayton.portfolio
+RUN dotnet publish -c Release -o /src/publish
 
-WORKDIR /server
-VOLUME ./wwwroot/Repository
-COPY . ./
-
-RUN dotnet publish -c Release -o publish
-
-EXPOSE 5000/tcp
-
-ENTRYPOINT ["dotnet", "abrayton.portfolio.dll"]
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.0 AS runtime
+WORKDIR /app
+COPY --from=publish /src/publish .
+# ENTRYPOINT ["dotnet", "Colors.API.dll"]
+# heroku uses the following
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet abrayton.portfolio.dll
