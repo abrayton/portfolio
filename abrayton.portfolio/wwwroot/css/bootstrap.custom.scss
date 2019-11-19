@@ -13,6 +13,7 @@ $enable-responsive-font-sizes: true;
 //SASS Variables
 $open-sans: 'Open Sans', sans-serif;
 $GT-color: #37A56E;
+$FTA-color: #F02600;
 
 html {
     /* For a sticky footer.. */
@@ -139,11 +140,6 @@ body {
         filter: drop-shadow(2px 5px 4px rgba(0,0,0,0.65));
     }
 
-    .bg-gradient {
-        background: rgb(55,165,110);
-        background: linear-gradient(180deg, rgba(55,165,110,1) 0%, rgba(16,54,35,1) 100%);
-    }
-
     .vert-bg {
         background: rgb(55,165,110);
         background: linear-gradient(90deg, rgba(55,165,110,1) 0%, rgba(16,54,35,1) 100%);
@@ -157,43 +153,107 @@ body {
         line-height: 2;
     }
     /*Project: GT_Web_App*/
-    main#GT_Web_App {
-        background-color:$white;
-        .h2 {
-            color: $GT-color;
+main#GTWebApp {
+    background-color: $white;
 
-            > span.border {
-                border-color: $GT-color !important;
-                border-width: 3px !important;
-            }
+    .bg-gradient {
+        background: rgb(55,165,110);
+        background: linear-gradient(180deg, rgba(55,165,110,1) 0%, rgba(16,54,35,1) 100%);
+    }
+
+    .h2 {
+        color: $GT-color;
+
+        > span.border {
+            border-color: $GT-color !important;
+            border-width: 3px !important;
         }
+    }
 
-        .text-wrap {
-            width: 100%;
+    .text-wrap {
+        width: 100%;
 
-            @include media-breakpoint-up(md) {
-                max-width: 305px;
-            }
+        @include media-breakpoint-up(md) {
+            max-width: 305px;
         }
+    }
 
-        .btn-primary {
-            background: $GT-color;
-        }
-        /*Better OL>LI number styles*/
-        ol {
-            counter-reset: item;
+    .btn-primary {
+        background: $GT-color;
+    }
 
-            li {
-                font-size: 1.2rem;
-                display: block;
+    /*Better OL>LI number styles*/
+    ol {
+        counter-reset: item;
 
-                &:before {
-                    content: counter(item) ". ";
-                    counter-increment: item;
-                    color: $GT-color;
-                    font-size: 1.25rem;
-                    margin-left: -23px;
-                }
+        li {
+            font-size: 1.2rem;
+            display: block;
+
+            &:before {
+                content: counter(item) ". ";
+                counter-increment: item;
+                color: $GT-color;
+                font-size: 1.25rem;
+                margin-left: -23px;
             }
         }
     }
+}
+/*Project: FTA_Web_App*/
+main#FTAWebApp {
+    background-color: $white;
+
+
+    .bg-gradient {
+        background: rgb(255, 95, 56);
+        background: linear-gradient(150deg, rgba(255, 95, 56,1) 0%, rgba(168, 26, 0,1) 33%, rgba(159, 25, 0,1) 100%);
+    }
+
+    #wireframes {
+        background: url('../img/mockups/fta_wireframes.png') center center no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+    .h2 {
+        color: $FTA-color;
+
+        > span.border {
+            border-color: $FTA-color !important;
+            border-width: 3px !important;
+        }
+    }
+
+    .text-wrap {
+        width: 100%;
+
+        @include media-breakpoint-up(md) {
+            max-width: 305px;
+        }
+    }
+
+    .btn-primary {
+        background: $FTA-color;
+    }
+
+    ul {
+        list-style: none;
+    }
+    /*Better OL>LI number styles*/
+    ol {
+        counter-reset: item;
+
+        li {
+            font-size: 1.2rem;
+            display: block;
+
+            &:before {
+                content: counter(item) ". ";
+                counter-increment: item;
+                color: $FTA-color;
+                font-size: 1.25rem;
+                margin-left: -23px;
+            }
+        }
+    }
+}

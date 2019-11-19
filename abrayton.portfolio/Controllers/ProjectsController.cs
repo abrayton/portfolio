@@ -8,5 +8,9 @@ namespace abrayton.portfolio.Controllers
         {
             return View();
         }
+        public IActionResult FTA_Web_App()
+        {
+            return View();
+        }
     }
 }

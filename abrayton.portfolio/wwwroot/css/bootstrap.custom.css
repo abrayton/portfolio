@@ -7156,10 +7156,6 @@ body {
 .png-shadow {
   filter: drop-shadow(2px 5px 4px rgba(0, 0, 0, 0.65)); }
 
-.bg-gradient {
-  background: #37a56e;
-  background: linear-gradient(180deg, #37a56e 0%, #103623 100%); }
-
 .vert-bg {
   background: #37a56e;
   background: linear-gradient(90deg, #37a56e 0%, #103623 100%); }
@@ -7171,29 +7167,69 @@ p.lh-2 {
   line-height: 2; }
 
 /*Project: GT_Web_App*/
-main#GT_Web_App {
+main#GTWebApp {
   background-color: #fff;
   /*Better OL>LI number styles*/ }
-  main#GT_Web_App .h2 {
+  main#GTWebApp .bg-gradient {
+    background: #37a56e;
+    background: linear-gradient(180deg, #37a56e 0%, #103623 100%); }
+  main#GTWebApp .h2 {
     color: #37A56E; }
-    main#GT_Web_App .h2 > span.border {
+    main#GTWebApp .h2 > span.border {
       border-color: #37A56E !important;
       border-width: 3px !important; }
-  main#GT_Web_App .text-wrap {
+  main#GTWebApp .text-wrap {
     width: 100%; }
     @media (min-width: 768px) {
-      main#GT_Web_App .text-wrap {
+      main#GTWebApp .text-wrap {
         max-width: 305px; } }
-  main#GT_Web_App .btn-primary {
+  main#GTWebApp .btn-primary {
     background: #37A56E; }
-  main#GT_Web_App ol {
+  main#GTWebApp ol {
     counter-reset: item; }
-    main#GT_Web_App ol li {
+    main#GTWebApp ol li {
       font-size: 1.2rem;
       display: block; }
-      main#GT_Web_App ol li:before {
+      main#GTWebApp ol li:before {
         content: counter(item) ". ";
         counter-increment: item;
         color: #37A56E;
+        font-size: 1.25rem;
+        margin-left: -23px; }
+
+/*Project: FTA_Web_App*/
+main#FTAWebApp {
+  background-color: #fff;
+  /*Better OL>LI number styles*/ }
+  main#FTAWebApp .bg-gradient {
+    background: #ff5f38;
+    background: linear-gradient(150deg, #ff5f38 0%, #a81a00 33%, #9f1900 100%); }
+  main#FTAWebApp #wireframes {
+    background: url("../img/mockups/fta_wireframes.png") center center no-repeat;
+    background-size: cover;
+    height: 100vh; }
+  main#FTAWebApp .h2 {
+    color: #F02600; }
+    main#FTAWebApp .h2 > span.border {
+      border-color: #F02600 !important;
+      border-width: 3px !important; }
+  main#FTAWebApp .text-wrap {
+    width: 100%; }
+    @media (min-width: 768px) {
+      main#FTAWebApp .text-wrap {
+        max-width: 305px; } }
+  main#FTAWebApp .btn-primary {
+    background: #F02600; }
+  main#FTAWebApp ul {
+    list-style: none; }
+  main#FTAWebApp ol {
+    counter-reset: item; }
+    main#FTAWebApp ol li {
+      font-size: 1.2rem;
+      display: block; }
+      main#FTAWebApp ol li:before {
+        content: counter(item) ". ";
+        counter-increment: item;
+        color: #F02600;
         font-size: 1.25rem;
         margin-left: -23px; }
