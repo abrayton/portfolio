@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Content Remove="compilerconfig.json" />
+    <Content Remove="wwwroot\Documents\abrayton_uiux_designer.zip" />
     <Content Remove="wwwroot\Documents\GT_Web_App PS.zip" />
     <Content Remove="wwwroot\js\site.es5.js" />
     <Content Remove="wwwroot\js\site.es5.min.js" />
