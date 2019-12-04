@@ -29,6 +29,25 @@
         </div>
     </div>
 </div>
+@*<div class="container mt-2" >
+    <div class="row">
+        <div class="col-12">
+            <div role="status" aria-live="polite" aria-atomic="true" style="position: relative; min-width: 200px;">
+                <div class="toast" data-autohide="false" data-aos="fade-zoom-in" data-aos-delay="800" style="position: absolute; right: 0; top: 20px;">
+                    <div class="toast-header text-light bg-primary">
+                        <strong class="mr-auto">Sorry for the extra clicks!</strong>
+                        <button type="button" class="ml-2 mb-1 text-light close" data-dismiss="toast" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="toast-body">
+                        Welcome, glad you made it! I'm sorry you had to click through security warnings to get here, but I'm unable to purchase an SSL at this time.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*@
 <a class="unsplash-badge" href="https://unsplash.com/@@varietou?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Background photo by Jules D. on Unsplash">
     <span class="d-md-none text-light m-badge"><small>Background photo by Jules D. on Unsplash</small></span>
     <span class="d-none d-md-inline-block py-1 px-1 text-light">
@@ -36,8 +55,10 @@
     </span>
     <span class="d-none d-md-inline-block py-1 px-1 text-light">Unsplash</span>
 </a>
+
 @section Scripts {
     <script>
         $.backstretch("/img/bg.jpg");
+        $(".toast").toast("show");
     </script>
 }

@@ -257,3 +257,68 @@ main#FTAWebApp {
         }
     }
 }
+/*UI Page*/
+main#Design {
+    .card {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        margin-bottom: 30px;
+        border-top: hidden;
+        color: rgba(0, 0, 0, 0.87);
+        background: #fff;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14);
+
+        .card-image-top {
+            margin-left: 15px;
+            margin-right: 15px;
+            pointer-events: none;
+            border-bottom-left-radius: .25rem;
+            border-bottom-right-radius: .25rem;
+        }
+
+        .card-body {
+            padding: 15px 30px;
+        }
+    }
+
+    .card-columns {
+        @include media-breakpoint-only(md) {
+            column-count: 2;
+        }
+
+        @include media-breakpoint-only(lg) {
+            column-count: 3;
+        }
+        /*@include media-breakpoint-only(xl) {
+            column-count: 4;
+        }*/
+    }
+
+    .carousel-control, .carousel-control {
+
+        &-prev {
+            background: rgb(0,0,0);
+            background: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 80%);
+
+            &-icon {
+                left: 0;
+                position: inherit;
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &-next {
+            background: rgb(0,0,0);
+            background: linear-gradient(270deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0) 80%);
+
+            &-icon {
+                right: 0;
+                position: inherit;
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
